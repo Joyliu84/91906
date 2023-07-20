@@ -6,15 +6,17 @@ from PIL import Image
 root = Tk()
 
 root.geometry()
-root.title("Eggs Tuckshop ordering system")
+root.title("EGGS Tuckshop ordering system")
 debug1 = StringVar
+
 
 # changing the background colour
 root.configure(background='#F7DBA7')
 
+
 # welcome message
 welcome_message = Label(text = "Welcome to the EGGS tuckshop ordering page" , font= ('Arial', 20), background = "#F7DBA7")
-welcome_message.grid(row=0, column=0, padx = 50, pady = 20, columnspan=3)
+welcome_message.grid(row=0, column=1,  pady = 20, columnspan=3)
 
 
 # titles for the food
@@ -30,10 +32,10 @@ desserts.grid(row = 1, column =3)
 
 
  # hot foods
-hot_chips = Label(root, text = 'Hot Chips - $4.00', background = "#F7DBA7")
-burger = Label(root, text = 'Burgers - $5.00', padx = 40, pady = 20, background = "#F7DBA7")
-pasta = Label(root, text = 'Pasta - $5.00', padx = 40, pady = 20, background = "#F7DBA7")
-soup = Label(root, text = 'Soup - $4.50', padx = 40, pady = 20, background = "#F7DBA7")
+hot_chips = Label(root, text = 'Hot Chips - $4.00', background = "#F7DBA7", font= ('Arial', 13))
+burger = Label(root, text = 'Burgers - $5.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+pasta = Label(root, text = 'Pasta - $5.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+soup = Label(root, text = 'Soup - $4.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
 
 hot_chips.grid(row = 2, column = 0)
 burger.grid(row = 5, column =0)
@@ -41,10 +43,10 @@ pasta.grid(row = 8, column =0)
 soup.grid(row = 11, column =0)
 
 # chilled
-fruit_salad = Label(root, text = 'Fruit Salad - $3.00', padx = 40, pady = 20, background = "#F7DBA7")
-sushi = Label(root, text = 'Sushi - $5.50', padx = 40, pady = 20, background = "#F7DBA7")
-sandwiches = Label(root, text = 'Sandwiches - $5.00', padx = 40, pady = 20, background = "#F7DBA7")
-egg_salad = Label(root, text = 'Egg Salad - $4.50', padx = 40, pady = 20, background = "#F7DBA7")
+fruit_salad = Label(root, text = 'Fruit Salad - $3.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+sushi = Label(root, text = 'Sushi - $5.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+sandwiches = Label(root, text = 'Sandwiches - $5.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+egg_salad = Label(root, text = 'Egg Salad - $4.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
 
 fruit_salad.grid(row = 2, column = 1)
 sushi.grid(row = 5, column =1)
@@ -52,10 +54,10 @@ sandwiches.grid(row = 8, column =1)
 egg_salad.grid(row = 11, column =1)
 
 # drinks
-cola = Label(root, text = 'Cola - $2.00', padx = 40, pady = 20, background = "#F7DBA7")
-milkshake = Label(root, text = 'Milkshake - $2.50', padx = 40, pady = 20, background = "#F7DBA7")
-orange_juice = Label(root, text = 'Orange juice $2.50', padx = 40, pady = 20, background = "#F7DBA7")
-apple_juice = Label(root, text = 'Apple Juice - $2.50', padx = 40, pady = 20, background = "#F7DBA7")
+cola = Label(root, text = 'Cola - $2.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+milkshake = Label(root, text = 'Milkshake - $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+orange_juice = Label(root, text = 'Orange juice $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+apple_juice = Label(root, text = 'Apple Juice - $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
 
 cola.grid(row = 2, column = 2)
 milkshake.grid(row = 5, column =2)
@@ -63,10 +65,10 @@ orange_juice.grid(row = 8, column =2)
 apple_juice.grid(row = 11, column =2)
 
 # desserts
-brownies = Label(root, text = 'Brownies - $3.00', padx = 40, pady = 20, background = "#F7DBA7")
-cookies = Label(root, text = 'Cookies - $2.50 ', padx = 40, pady = 20, background = "#F7DBA7")
-ice_cream = Label(root, text = 'Ice Cream - $2.50', padx = 40, pady = 20, background = "#F7DBA7")
-cupcakes = Label(root, text = 'Cupcakes - $3.00', padx = 40, pady = 20, background = "#F7DBA7")
+brownies = Label(root, text = 'Brownies - $3.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+cookies = Label(root, text = 'Cookies - $2.50 ', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+ice_cream = Label(root, text = 'Ice Cream - $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+cupcakes = Label(root, text = 'Cupcakes - $3.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
 
 brownies.grid(row = 2, column = 3)
 cookies.grid(row = 5, column =3)
@@ -483,6 +485,9 @@ def checkout():
         total = Label(checkout_window, text = "Total - $%.2f"%total, padx = 40, pady = 10, font= ('Arial', 14), background = "#F7DBA7")
         total.grid(row=38, column= 2, rowspan=2)
 
+        dining_options = Label(checkout_window, text = "Dining Options", padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        dining_options.grid(row = 40, column= 2, rowspan=2 )
+
         # dine in take out option
         clicked = StringVar()
         clicked.set("Dine in")
@@ -504,17 +509,19 @@ def checkout():
             ordered_window = Toplevel(checkout_window)
             ordered_window.configure(background='#F7DBA7')
             ordered_window.title("Order Placed")
+            ordered_num = Label(ordered_window, text="Your order number is 1", font= ('Arial', 15), background = "#F7DBA7")
+            ordered_num.grid(row = 3, column = 2, padx = 50, pady = 20, columnspan= 3)
             ordered_msg = Label(ordered_window, text="Your order has been placed", font= ('Arial', 20), background = "#F7DBA7")
             ordered_msg.grid(row = 2, column = 2, padx = 50, pady = 20, columnspan= 3)
-            time = Label(ordered_window, text="Your order will be ready in around 10 minutes", font= ('Arial', 15), background = "#F7DBA7")
-            time.grid(row = 3, column = 2, padx = 50, pady = 20, columnspan= 3)   
+            time = Label(ordered_window, text="Order will be ready in around 10 minutes", font= ('Arial', 15), background = "#F7DBA7")
+            time.grid(row = 4, column = 2, padx = 50, pady = 20, columnspan= 3)   
 
 
         
 
 
         # place order button
-        place_order = Button(checkout_window, text = "Place order", font= ('Arial', 15), pady = 10, command = order, background = "#F1AB86")
+        place_order = Button(checkout_window, text = "Place order", font= ('Arial', 17), pady = 10, command = order, background = "#F1AB86")
         place_order.grid(row = 48, column= 2, rowspan=2)
 
         
@@ -530,8 +537,8 @@ def checkout():
 
 
 # buttons
-check_out = Button(root, text = 'Check Out', height = 5, width = 10, command = lambda:[checkout()], background = "#F1AB86")
-check_out.grid(row = 9, column=4, rowspan= 2, padx= 10)
+check_out = Button(root, text = 'Check Out', height = 5, width = 10, command = lambda:[checkout()], background = "#F1AB86", font= ('Arial', 13))
+check_out.grid(row = 5, column=4, rowspan= 2, padx= 10)
 
 
 
@@ -543,20 +550,23 @@ def open_help():
     help_welcome = Label(help_window, text="Help", font= ('Arial', 20), background = "#F7DBA7")
     help_welcome.grid(row=1, column= 3,padx = 50, pady = 20)
     help_text = Label(help_window, text="Welcome to the EGGS tuck shop ordering system\n"
-                                        "If you wish you order, you can do so by entering\n"
+                                        "If you wish to order, you can do so by entering\n"
                                         "the quantity you want under your desired food item\n "
-                                        "(Please only enter a positive wholenumber under 100)\n"
+                                        "(In the following white bar)\n"
+                                        "(Please only enter a positive wholenumber under 100).\n"
                                         "After you have finished ordering, press on the checkout\n"
                                         "button and a summary of your order, you will be required\n"
                                         "to enter the name for the order along with the option\n"
                                         "to deliver or pick up your order", font= ('Arial', 14), background = "#F7DBA7")
     help_text.grid(row = 2, column=2, columnspan=3, padx = 50, pady = 50)
 
-help = Button(root, text = 'Help', height = 5, width = 10,command = open_help, background = "#F1AB86")
-help.grid(row = 11, column=4, rowspan= 2, padx= 10)
+# help button
+help = Button(root, text = 'Help', height = 5, width = 10,command = open_help, background = "#F1AB86", font= ('Arial', 13))
+help.grid(row = 3, column=4, rowspan= 2, padx= 10)
  
-exit = Button(root, text = 'Exit', height = 5, width = 10, background = "#F1AB86", command=root.destroy)
-exit.grid(row = 13, column=4, rowspan= 2, pady= 10)
+# exit button 
+exit = Button(root, text = 'Exit', height = 5, width = 10, background = "#E76B74", command=root.destroy, font= ('Arial', 13))
+exit.grid(row = 7, column=4, rowspan= 3, pady= 10)
 
 # reset
 

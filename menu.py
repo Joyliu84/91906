@@ -10,7 +10,7 @@ root.geometry()
 root.title("EGGS Tuckshop ordering system")
 debug1 = StringVar
 
-root.geometry("1000x850")
+root.geometry("1000x800")
 
 
 # changing the background colour
@@ -23,10 +23,10 @@ welcome_message.grid(row=0, column=1,  pady = 20, columnspan=3)
 
 
 # titles for the food
-hot = Label(root, text = 'Hot', padx = 40, pady = 20, font= ('Arial', 16), background = "#F7DBA7")
-chilled = Label(root, text = 'Chilled', padx = 40, pady = 20, font= ('Arial', 16), background = "#F7DBA7")
-drinks = Label(root, text = 'Drinks', padx = 40, pady = 20, font= ('Arial', 16), background = "#F7DBA7")
-desserts = Label(root, text = 'Desserts', padx = 40, pady = 20, font= ('Arial', 16), background = "#F7DBA7")
+hot = Label(root, text = 'Hot', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
+chilled = Label(root, text = 'Chilled', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
+drinks = Label(root, text = 'Drinks', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
+desserts = Label(root, text = 'Desserts', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
 
 hot.grid(row = 1, column = 0)
 chilled.grid(row = 1, column =1)
@@ -36,9 +36,9 @@ desserts.grid(row = 1, column =3)
 
  # hot foods
 hot_chips = Label(root, text = 'Hot Chips - $4.00', background = "#F7DBA7", font= ('Arial', 13))
-burger = Label(root, text = 'Burgers - $5.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-pasta = Label(root, text = 'Pasta - $5.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-soup = Label(root, text = 'Soup - $4.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+burger = Label(root, text = 'Burgers - $5.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+pasta = Label(root, text = 'Pasta - $5.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+soup = Label(root, text = 'Soup - $4.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
 hot_chips.grid(row = 2, column = 0)
 burger.grid(row = 5, column =0)
@@ -46,10 +46,10 @@ pasta.grid(row = 8, column =0)
 soup.grid(row = 11, column =0)
 
 # chilled
-fruit_salad = Label(root, text = 'Fruit Salad - $3.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+fruit_salad = Label(root, text = 'Fruit Salad - $3.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 sushi = Label(root, text = 'Sushi - $5.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-sandwiches = Label(root, text = 'Sandwiches - $5.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-egg_salad = Label(root, text = 'Egg Salad - $4.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+sandwiches = Label(root, text = 'Sandwiches - $5.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+egg_salad = Label(root, text = 'Egg Salad - $4.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
 fruit_salad.grid(row = 2, column = 1)
 sushi.grid(row = 5, column =1)
@@ -57,10 +57,10 @@ sandwiches.grid(row = 8, column =1)
 egg_salad.grid(row = 11, column =1)
 
 # drinks
-cola = Label(root, text = 'Cola - $2.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-milkshake = Label(root, text = 'Milkshake - $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-orange_juice = Label(root, text = 'Orange juice $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-apple_juice = Label(root, text = 'Apple Juice - $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+cola = Label(root, text = 'Cola - $2.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+milkshake = Label(root, text = 'Milkshake - $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+orange_juice = Label(root, text = 'Orange juice $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+apple_juice = Label(root, text = 'Apple Juice - $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
 cola.grid(row = 2, column = 2)
 milkshake.grid(row = 5, column =2)
@@ -68,10 +68,10 @@ orange_juice.grid(row = 8, column =2)
 apple_juice.grid(row = 11, column =2)
 
 # desserts
-brownies = Label(root, text = 'Brownies - $3.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-cookies = Label(root, text = 'Cookies - $2.50 ', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-ice_cream = Label(root, text = 'Ice Cream - $2.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-cupcakes = Label(root, text = 'Cupcakes - $3.00', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+brownies = Label(root, text = 'Brownies - $3.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+cookies = Label(root, text = 'Cookies - $2.50 ', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+ice_cream = Label(root, text = 'Ice Cream - $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+cupcakes = Label(root, text = 'Cupcakes - $3.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
 brownies.grid(row = 2, column = 3)
 cookies.grid(row = 5, column =3)
@@ -524,7 +524,7 @@ def checkout():
 
 
         # place order button
-        place_order = Button(checkout_window, text = "Place order", font= ('Arial', 17), pady = 10, command = order, background = "#F1AB86")
+        place_order = Button(checkout_window, text = "Place order", font= ('Arial', 12), pady = 10, command = order, background = "#F1AB86")
         place_order.grid(row = 48, column= 2, rowspan=2)
 
         

@@ -1,5 +1,6 @@
 from tkinter import * 
 from tkinter import messagebox
+from tkinter import ttk
 import PIL
 from PIL import ImageTk
 from PIL import Image
@@ -8,6 +9,8 @@ root = Tk()
 root.geometry()
 root.title("EGGS Tuckshop ordering system")
 debug1 = StringVar
+
+root.geometry("1000x850")
 
 
 # changing the background colour

@@ -6,11 +6,12 @@ from PIL import ImageTk
 from PIL import Image
 root = Tk()
 
-root.geometry()
+
+
 root.title("EGGS Tuckshop ordering system")
 debug1 = StringVar
 
-root.geometry("1000x800")
+root.geometry("1000x800") #sets the size of window
 
 
 # changing the background colour
@@ -18,16 +19,22 @@ root.configure(background='#F7DBA7')
 
 
 # welcome message
-welcome_message = Label(text = "Welcome to the EGGS tuckshop ordering page" , font= ('Arial', 20), background = "#F7DBA7")
+welcome_message = Label(text = "Welcome to the EGGS tuckshop ordering page" , \
+                        font= ('Arial', 20), background = "#F7DBA7")
 welcome_message.grid(row=0, column=1,  pady = 20, columnspan=3)
 
 
 # titles for the food
-hot = Label(root, text = 'Hot', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
-chilled = Label(root, text = 'Chilled', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
-drinks = Label(root, text = 'Drinks', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
-desserts = Label(root, text = 'Desserts', padx = 40, pady = 10, font= ('Arial', 16), background = "#F7DBA7")
+hot = Label(root, text = 'Hot', padx = 40, pady = 10, \
+            font= ('Arial', 16), background = "#F7DBA7")
+chilled = Label(root, text = 'Chilled', padx = 40, \
+                pady = 10, font= ('Arial', 16), background = "#F7DBA7")
+drinks = Label(root, text = 'Drinks', padx = 40, \
+               pady = 10, font= ('Arial', 16), background = "#F7DBA7")
+desserts = Label(root, text = 'Desserts', padx = 40, \
+                 pady = 10, font= ('Arial', 16), background = "#F7DBA7")
 
+#printing out the titles for the food 
 hot.grid(row = 1, column = 0)
 chilled.grid(row = 1, column =1)
 drinks.grid(row = 1, column =2)
@@ -35,44 +42,64 @@ desserts.grid(row = 1, column =3)
 
 
  # hot foods
-hot_chips = Label(root, text = 'Hot Chips - $4.00', background = "#F7DBA7", font= ('Arial', 13))
-burger = Label(root, text = 'Burgers - $5.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-pasta = Label(root, text = 'Pasta - $5.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-soup = Label(root, text = 'Soup - $4.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+hot_chips = Label(root, text = 'Hot Chips - $4.00',\
+                   background = "#F7DBA7", font= ('Arial', 13))
+burger = Label(root, text = 'Burgers - $5.00', padx = 40, \
+               pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+pasta = Label(root, text = 'Pasta - $5.00', padx = 40,\
+               pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+soup = Label(root, text = 'Soup - $4.50', padx = 40, \
+             pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
+#printing out the hot foods
 hot_chips.grid(row = 2, column = 0)
 burger.grid(row = 5, column =0)
 pasta.grid(row = 8, column =0)
 soup.grid(row = 11, column =0)
 
 # chilled
-fruit_salad = Label(root, text = 'Fruit Salad - $3.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-sushi = Label(root, text = 'Sushi - $5.50', padx = 40, pady = 20, background = "#F7DBA7", font= ('Arial', 13))
-sandwiches = Label(root, text = 'Sandwiches - $5.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-egg_salad = Label(root, text = 'Egg Salad - $4.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+fruit_salad = Label(root, text = 'Fruit Salad - $3.00', \
+                    padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+sushi = Label(root, text = 'Sushi - $5.50', padx = 40, \
+              pady = 20, background = "#F7DBA7", font= ('Arial', 13))
+sandwiches = Label(root, text = 'Sandwiches - $5.00', \
+                   padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+egg_salad = Label(root, text = 'Egg Salad - $4.50',\
+                   padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
+#printing out the chilled foods
 fruit_salad.grid(row = 2, column = 1)
 sushi.grid(row = 5, column =1)
 sandwiches.grid(row = 8, column =1)
 egg_salad.grid(row = 11, column =1)
 
 # drinks
-cola = Label(root, text = 'Cola - $2.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-milkshake = Label(root, text = 'Milkshake - $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-orange_juice = Label(root, text = 'Orange juice $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-apple_juice = Label(root, text = 'Apple Juice - $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+cola = Label(root, text = 'Cola - $2.00', padx = 40, \
+             pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+milkshake = Label(root, text = 'Milkshake - $2.50', \
+                  padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+orange_juice = Label(root, text = 'Orange juice $2.50', \
+                     padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+apple_juice = Label(root, text = 'Apple Juice - $2.50', \
+                    padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
+#printing out the drinks
 cola.grid(row = 2, column = 2)
 milkshake.grid(row = 5, column =2)
 orange_juice.grid(row = 8, column =2)
 apple_juice.grid(row = 11, column =2)
 
 # desserts
-brownies = Label(root, text = 'Brownies - $3.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-cookies = Label(root, text = 'Cookies - $2.50 ', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-ice_cream = Label(root, text = 'Ice Cream - $2.50', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
-cupcakes = Label(root, text = 'Cupcakes - $3.00', padx = 40, pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+brownies = Label(root, text = 'Brownies - $3.00', padx = 40,\
+                  pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+cookies = Label(root, text = 'Cookies - $2.50 ', padx = 40,\
+                 pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+ice_cream = Label(root, text = 'Ice Cream - $2.50', padx = 40, \
+                  pady = 10, background = "#F7DBA7", font= ('Arial', 13))
+cupcakes = Label(root, text = 'Cupcakes - $3.00', padx = 40, \
+                 pady = 10, background = "#F7DBA7", font= ('Arial', 13))
 
+#printing out the desserts
 brownies.grid(row = 2, column = 3)
 cookies.grid(row = 5, column =3)
 ice_cream.grid(row = 8, column =3)
@@ -264,6 +291,7 @@ cupcakeEntry.grid(row = 13, column=3)
 # program logic
 def checkout():
     
+    #getting the value for each input
     chip_value = chip_entry.get()
     burger_value = burger_entry.get()
     pasta_value = pasta_entry.get()
@@ -281,7 +309,7 @@ def checkout():
     icec_value = icecEntry.get()
     cupcake_value = cupcakeEntry.get()
 
-# checking if there is quantity inputed if not the value will be set to 0
+    # checking if there is quantity inputed if not the value will be set to 0
     if len(chip_value) == 0:
         chip_value = 0
     if len(burger_value) == 0:
@@ -334,7 +362,7 @@ def checkout():
         icec_value = int(icec_value)
         cupcake_value = int(cupcake_value)
         
-        
+        #if no error has been found
         occour_trouble = False
     # error trapping for numbers not between 1-100
         if chip_value >= 100 or chip_value < 0:
@@ -406,12 +434,13 @@ def checkout():
 
     if not occour_trouble: #checking whether a error has occured for the inputed quantity
         checkout_window = Toplevel(root) #if not the checkout window will open
-        checkout_window.configure(background='#F7DBA7')
+        checkout_window.configure(background='#F7DBA7') #setting the colour for the checkout window
         checkout_window.title("Checkout")
-        checkout_welcome = Label(checkout_window, text="Check Out", font= ('Arial', 20), background = "#F7DBA7")
-        checkout_welcome.grid( row=0, column= 1, columnspan=2, padx = 50, pady = 22,)
+        checkout_welcome = Label(checkout_window, text="Check Out", \
+                                 font= ('Arial', 20), background = "#F7DBA7") 
+        checkout_welcome.grid( row=0, column= 1, columnspan=2, padx = 50, pady = 22,) #displaying the title of the checkout page
 
-        # price of food
+        # calculating the price of food
         chip_price = chip_value * 4
         burger_price = burger_value * 5
         pasta_price = pasta_value * 5
@@ -428,80 +457,105 @@ def checkout():
         cookie_price = cookie_value * 2.5
         icec_price = icec_value* 2.5
         cupcake_price = cupcake_value * 3
-        total = chip_price + burger_price + pasta_price + soup_price + fruits_price + sushi_price + sandwich_price + eggs_price + cola_price + milkshake_price + orangej_price + applej_price + brownie_price + cookie_price + icec_price + cupcake_price
+        total = chip_price + burger_price + pasta_price + \
+            soup_price + fruits_price + sushi_price + \
+                sandwich_price + eggs_price + cola_price + \
+                    milkshake_price + orangej_price + applej_price \
+                        + brownie_price + cookie_price + \
+                            icec_price + cupcake_price
         tax = total * 0.15
         
 
         # display items prices on the GUI
-        chip_p = Label(checkout_window, text = "Chips - \t $%.2f"%chip_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        chip_p = Label(checkout_window, text = "Chips - \t $%.2f"%chip_price, \
+                       padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         chip_p.grid(row=2, column= 2, rowspan=2)
         
-        burger_p = Label(checkout_window, text = "Burgers -  $%.2f"%burger_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        burger_p = Label(checkout_window, text = "Burgers -  $%.2f"%burger_price, \
+                         padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         burger_p.grid(row=4, column= 2, rowspan=2)
 
-        pasta_p = Label(checkout_window, text = "Pasta - \t $%.2f"%pasta_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        pasta_p = Label(checkout_window, text = "Pasta - \t $%.2f"%pasta_price, \
+                        padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         pasta_p.grid(row=6, column= 2, rowspan=2)
 
-        soup_p = Label(checkout_window, text = "Soup - \t $%.2f"%soup_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        soup_p = Label(checkout_window, text = "Soup - \t $%.2f"%soup_price, \
+                       padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         soup_p.grid(row=8, column= 2, rowspan=2)
 
-        fruits_p = Label(checkout_window, text = "Fruit salad - $%.2f"%fruits_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        fruits_p = Label(checkout_window, text = "Fruit salad - $%.2f"%fruits_price, \
+                         padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         fruits_p.grid(row=10, column= 2, rowspan=2)
         
-        sushi_p = Label(checkout_window, text = "Sushi - \t $%.2f"%sushi_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        sushi_p = Label(checkout_window, text = "Sushi - \t $%.2f"%sushi_price, \
+                        padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         sushi_p.grid(row=12, column= 2, rowspan=2)
 
-        sandwich_p = Label(checkout_window, text = "Sandwich - $%.2f"%sandwich_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        sandwich_p = Label(checkout_window, text = "Sandwich - $%.2f"%sandwich_price, \
+                           padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         sandwich_p.grid(row=14, column= 2, rowspan=2)
 
-        eggs_p = Label(checkout_window, text = "Egg salad - $%.2f"%eggs_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        eggs_p = Label(checkout_window, text = "Egg salad - $%.2f"%eggs_price, \
+                       padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         eggs_p.grid(row=16, column= 2, rowspan=2)
 
-        cola_p = Label(checkout_window, text = "Cola - \t $%.2f"%cola_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        cola_p = Label(checkout_window, text = "Cola - \t $%.2f"%cola_price, \
+                       padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         cola_p.grid(row=18, column= 2, rowspan=2)
 
-        milkshake_p = Label(checkout_window, text = "Milkshake - $%.2f"%milkshake_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        milkshake_p = Label(checkout_window, text = "Milkshake - $%.2f"%milkshake_price, \
+                            padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         milkshake_p.grid(row=20, column= 2, rowspan=2)
 
-        orangej_p = Label(checkout_window, text = "Orange Juice - $%.2f"%orangej_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        orangej_p = Label(checkout_window, text = "Orange Juice - $%.2f"%orangej_price, \
+                          padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         orangej_p.grid(row=22, column= 2, rowspan=2)
 
-        applej_p = Label(checkout_window, text = "Apple Juice - $%.2f"%applej_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        applej_p = Label(checkout_window, text = "Apple Juice - $%.2f"%applej_price, \
+                         padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         applej_p.grid(row=24, column= 2, rowspan=2)
 
-        brownie_p = Label(checkout_window, text = "Brownie -  $%.2f"%brownie_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        brownie_p = Label(checkout_window, text = "Brownie -  $%.2f"%brownie_price, \
+                          padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         brownie_p.grid(row=26, column= 2, rowspan=2)
 
-        cookie_p = Label(checkout_window, text = "Cookie - \t $%.2f"%cookie_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        cookie_p = Label(checkout_window, text = "Cookie - \t $%.2f"%cookie_price, \
+                         padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         cookie_p.grid(row=28, column= 2, rowspan=2)
 
-        icec_p = Label(checkout_window, text = "Ice cream - $%.2f"%icec_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        icec_p = Label(checkout_window, text = "Ice cream - $%.2f"%icec_price, \
+                       padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         icec_p.grid(row=30, column= 2, rowspan=2)
 
 
-        cupcake_p = Label(checkout_window, text = "Cupcake - $%.2f"%cupcake_price, padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        cupcake_p = Label(checkout_window, text = "Cupcake - $%.2f"%cupcake_price, \
+                          padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         cupcake_p.grid(row=32, column= 2, rowspan=2)
 
-        tax = Label(checkout_window, text = "Tax - $%.2f"%tax, padx = 40, pady = 10, font= ('Arial', 14), background = "#F7DBA7")
+        tax = Label(checkout_window, text = "Tax - $%.2f"%tax, padx = 40, \
+                    pady = 10, font= ('Arial', 14), background = "#F7DBA7")
         tax.grid(row=36, column= 2, rowspan=2)
 
-        total = Label(checkout_window, text = "Total - $%.2f"%total, padx = 40, pady = 10, font= ('Arial', 14), background = "#F7DBA7")
+        total = Label(checkout_window, text = "Total - $%.2f"%total, padx = 40,\
+                       pady = 10, font= ('Arial', 14), background = "#F7DBA7")
         total.grid(row=38, column= 2, rowspan=2)
 
-        dining_options = Label(checkout_window, text = "Dining Options", padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        dining_options = Label(checkout_window, text = "Dining Options", \
+                               padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         dining_options.grid(row = 40, column= 2, rowspan=2 )
 
         # dine in take out option
         clicked = StringVar()
         clicked.set("Dine in")
 
-        drop = OptionMenu(checkout_window, clicked, "Dine in", "Take out")
+        drop = OptionMenu(checkout_window, clicked, "Dine in", "Take out") #creating the drop down menu
         drop.config(background = "#F7DBA7")
         drop["menu"].config(background = "#F1AB86")
-        drop.grid(row =42, column= 2, rowspan = 2, columnspan= 3)
+        drop.grid(row =42, column= 2, rowspan = 2, columnspan= 3) #displaying the drop down menu
 
         # enter name
-        name = Label(checkout_window, text="Name for order (optional)", padx = 40, font= ('Arial', 13), background = "#F7DBA7")
+        name = Label(checkout_window, text="Name for order (optional)", \
+                     padx = 40, font= ('Arial', 13), background = "#F7DBA7")
         name.grid(row = 44, column= 2, rowspan=2 )
 
         name_entry = Entry(checkout_window)
@@ -509,23 +563,28 @@ def checkout():
 
         # placed order window
         def order():
-            ordered_window = Toplevel(checkout_window)
-            ordered_window.configure(background='#F7DBA7')
-            ordered_window.title("Order Placed")
-            ordered_num = Label(ordered_window, text="Your order number is 1", font= ('Arial', 15), background = "#F7DBA7")
-            ordered_num.grid(row = 3, column = 2, padx = 50, pady = 20, columnspan= 3)
-            ordered_msg = Label(ordered_window, text="Your order has been placed", font= ('Arial', 20), background = "#F7DBA7")
-            ordered_msg.grid(row = 2, column = 2, padx = 50, pady = 20, columnspan= 3)
-            time = Label(ordered_window, text="Order will be ready in around 10 minutes", font= ('Arial', 15), background = "#F7DBA7")
-            time.grid(row = 4, column = 2, padx = 50, pady = 20, columnspan= 3)   
+            ordered_window = Toplevel(checkout_window) #creating the ordered window
+            ordered_window.configure(background='#F7DBA7') #setting the colour
+            ordered_window.title("Order Placed") #title of the window
+            ordered_num = Label(ordered_window, text="Your order number is 1", \
+                                font= ('Arial', 15), background = "#F7DBA7")
+            ordered_num.grid(row = 3, column = 2, padx = 50, pady = 20, \
+                             columnspan= 3) #displaying order number
+            ordered_msg = Label(ordered_window, text="Your order has been placed", \
+                                font= ('Arial', 20), background = "#F7DBA7")
+            ordered_msg.grid(row = 2, column = 2, padx = 50, pady = 20, columnspan= 3) #displaying ordered message
+            time = Label(ordered_window, text="Order will be ready in around 10 minutes", \
+                         font= ('Arial', 15), background = "#F7DBA7")
+            time.grid(row = 4, column = 2, padx = 50, pady = 20, columnspan= 3) #displaying the wait time  
 
 
         
 
 
         # place order button
-        place_order = Button(checkout_window, text = "Place order", font= ('Arial', 12), pady = 10, command = order, background = "#F1AB86")
-        place_order.grid(row = 48, column= 2, rowspan=2)
+        place_order = Button(checkout_window, text = "Place order", \
+                             font= ('Arial', 12), pady = 10, command = order, background = "#F1AB86")
+        place_order.grid(row = 48, column= 2, rowspan=2) #place order button which will open the ordered page when pressed
 
         
 
@@ -539,19 +598,20 @@ def checkout():
 
 
 
-# buttons
-check_out = Button(root, text = 'Check Out', height = 5, width = 10, command = lambda:[checkout()], background = "#F1AB86", font= ('Arial', 13))
+# checkout button
+check_out = Button(root, text = 'Check Out', height = 5, width = 10, \
+                   command = lambda:[checkout()], background = "#F1AB86", font= ('Arial', 13))
 check_out.grid(row = 5, column=4, rowspan= 2, padx= 10)
 
 
 
 # open help
 def open_help():
-    help_window = Toplevel(root)
-    help_window.configure(background='#F7DBA7')
-    help_window.title("Help")
+    help_window = Toplevel(root) #creating help window
+    help_window.configure(background='#F7DBA7') #setting window colour
+    help_window.title("Help") 
     help_welcome = Label(help_window, text="Help", font= ('Arial', 20), background = "#F7DBA7")
-    help_welcome.grid(row=1, column= 3,padx = 50, pady = 20)
+    help_welcome.grid(row=1, column= 3,padx = 50, pady = 20) #displaying the window title
     help_text = Label(help_window, text="Welcome to the EGGS tuck shop ordering system\n"
                                         "If you wish to order, you can do so by entering\n"
                                         "the quantity you want under your desired food item\n "
@@ -560,18 +620,20 @@ def open_help():
                                         "After you have finished ordering, press on the checkout\n"
                                         "button and a summary of your order, you will be required\n"
                                         "to enter the name for the order along with the option\n"
-                                        "to deliver or pick up your order", font= ('Arial', 14), background = "#F7DBA7")
+                                        "to deliver or pick up your order", font= ('Arial', 14), \
+                                            background = "#F7DBA7")
     help_text.grid(row = 2, column=2, columnspan=3, padx = 50, pady = 50)
 
 # help button
-help = Button(root, text = 'Help', height = 5, width = 10,command = open_help, background = "#F1AB86", font= ('Arial', 13))
+help = Button(root, text = 'Help', height = 5, width = 10,command = open_help,\
+               background = "#F1AB86", font= ('Arial', 13))
 help.grid(row = 3, column=4, rowspan= 2, padx= 10)
  
 # exit button 
-exit = Button(root, text = 'Exit', height = 5, width = 10, background = "#E76B74", command=root.destroy, font= ('Arial', 13))
+exit = Button(root, text = 'Exit', height = 5, width = 10, background = "#E76B74", \
+              command=root.destroy, font= ('Arial', 13))
 exit.grid(row = 7, column=4, rowspan= 3, pady= 10)
 
-# reset
 
 
 

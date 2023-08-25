@@ -10,6 +10,9 @@ root = Tk()
 root.title("EGGS Tuckshop ordering system")
 debug1 = StringVar
 
+# constants
+ERROR_CORRECTION = "Please enter a number between 1 - 100"
+
 # sets the size of window
 root.geometry("1000x800")
 
@@ -363,67 +366,67 @@ def checkout():
 
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif burger_value >= 100 or burger_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif pasta_value >= 100 or pasta_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif soup_value >= 100 or soup_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif fruits_value >= 100 or fruits_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif sushi_value >= 100 or sushi_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif sandwich_value >= 100 or sandwich_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif eggs_value >= 100 or eggs_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif cola_value >= 100 or cola_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif milkshake_value >= 100 or milkshake_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif orangej_value >= 100 or orangej_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif applej_value >= 100 or applej_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif brownie_value >= 100 or brownie_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif cookie_value >= 100 or cookie_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif icec_value >= 100 or icec_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif cupcake_value >= 100 or cupcake_value < 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
         elif chip_value == 0 and burger_value == 0 and pasta_value == 0 \
             and soup_value == 0 and fruits_value == 0 and sushi_value == 0 \
                 and sandwich_value == 0 and eggs_value == 0 and \
@@ -433,7 +436,7 @@ def checkout():
         and icec_value == 0 and cupcake_value == 0:
             occour_trouble = True
             messagebox.showerror(
-                "error", "Please enter a number between 1 - 100")
+                "error", ERROR_CORRECTION)
 
     except:
         occour_trouble = True
@@ -593,7 +596,7 @@ def checkout():
 
         # placed order window
         def order():
-            # creating the ordered window
+            """This creats the ordered window."""
             ordered_window = Toplevel(checkout_window)
             ordered_window.configure(
                 background='#F7DBA7')  # setting the colour
@@ -615,8 +618,7 @@ def checkout():
         # place order button
         place_order = Button(checkout_window, text="Place order",
                              font=('Arial', 12), pady=10, 
-                             command=order, background="#F1AB86")
-        # place order button which will open the ordered page when pressed
+                             command=order, background="#F1AB86")  # place order button which will open the ordered page when pressed
         place_order.grid(row=48, column=2, rowspan=2)
 
 
@@ -629,6 +631,7 @@ check_out.grid(row=5, column=4, rowspan=2, padx=10)
 
 # open help
 def open_help():
+    """This creates the help window."""
     help_window = Toplevel(root)  # creating help window
     help_window.configure(background='#F7DBA7')  # setting window colour
     help_window.title("Help")
